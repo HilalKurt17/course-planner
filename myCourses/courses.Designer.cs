@@ -30,11 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(courses));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.bttn_allCourses = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.chckBx_isFinished = new System.Windows.Forms.CheckBox();
-            this.bttn_delete = new System.Windows.Forms.Button();
-            this.bttn_update = new System.Windows.Forms.Button();
             this.bttn_register = new System.Windows.Forms.Button();
             this.txtBx_dueDate = new System.Windows.Forms.TextBox();
             this.txtBx_courseAcademy = new System.Windows.Forms.TextBox();
@@ -44,20 +41,23 @@
             this.lbl_courseAcademy = new System.Windows.Forms.Label();
             this.lbl_courseName = new System.Windows.Forms.Label();
             this.lbl_userName = new System.Windows.Forms.Label();
+            this.bttn_allCourses = new System.Windows.Forms.Button();
+            this.bttn_delete = new System.Windows.Forms.Button();
+            this.bttn_update = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.progress_bttn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.bttn_allCourses);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.chckBx_isFinished);
-            this.groupBox1.Controls.Add(this.bttn_delete);
-            this.groupBox1.Controls.Add(this.bttn_update);
             this.groupBox1.Controls.Add(this.bttn_register);
             this.groupBox1.Controls.Add(this.txtBx_dueDate);
             this.groupBox1.Controls.Add(this.txtBx_courseAcademy);
@@ -71,15 +71,6 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
-            // bttn_allCourses
-            // 
-            this.bttn_allCourses.BackColor = System.Drawing.Color.SteelBlue;
-            this.bttn_allCourses.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            resources.ApplyResources(this.bttn_allCourses, "bttn_allCourses");
-            this.bttn_allCourses.Name = "bttn_allCourses";
-            this.bttn_allCourses.UseVisualStyleBackColor = false;
-            this.bttn_allCourses.Click += new System.EventHandler(this.bttn_allCourses_Click);
-            // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
@@ -90,24 +81,6 @@
             resources.ApplyResources(this.chckBx_isFinished, "chckBx_isFinished");
             this.chckBx_isFinished.Name = "chckBx_isFinished";
             this.chckBx_isFinished.UseVisualStyleBackColor = true;
-            // 
-            // bttn_delete
-            // 
-            this.bttn_delete.BackColor = System.Drawing.Color.SteelBlue;
-            this.bttn_delete.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            resources.ApplyResources(this.bttn_delete, "bttn_delete");
-            this.bttn_delete.Name = "bttn_delete";
-            this.bttn_delete.UseVisualStyleBackColor = false;
-            this.bttn_delete.Click += new System.EventHandler(this.bttn_clicked);
-            // 
-            // bttn_update
-            // 
-            this.bttn_update.BackColor = System.Drawing.Color.SteelBlue;
-            this.bttn_update.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            resources.ApplyResources(this.bttn_update, "bttn_update");
-            this.bttn_update.Name = "bttn_update";
-            this.bttn_update.UseVisualStyleBackColor = false;
-            this.bttn_update.Click += new System.EventHandler(this.bttn_clicked);
             // 
             // bttn_register
             // 
@@ -158,6 +131,33 @@
             resources.ApplyResources(this.lbl_userName, "lbl_userName");
             this.lbl_userName.Name = "lbl_userName";
             // 
+            // bttn_allCourses
+            // 
+            this.bttn_allCourses.BackColor = System.Drawing.Color.SteelBlue;
+            this.bttn_allCourses.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.bttn_allCourses, "bttn_allCourses");
+            this.bttn_allCourses.Name = "bttn_allCourses";
+            this.bttn_allCourses.UseVisualStyleBackColor = false;
+            this.bttn_allCourses.Click += new System.EventHandler(this.bttn_allCourses_Click);
+            // 
+            // bttn_delete
+            // 
+            this.bttn_delete.BackColor = System.Drawing.Color.SteelBlue;
+            this.bttn_delete.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.bttn_delete, "bttn_delete");
+            this.bttn_delete.Name = "bttn_delete";
+            this.bttn_delete.UseVisualStyleBackColor = false;
+            this.bttn_delete.Click += new System.EventHandler(this.bttn_clicked);
+            // 
+            // bttn_update
+            // 
+            this.bttn_update.BackColor = System.Drawing.Color.SteelBlue;
+            resources.ApplyResources(this.bttn_update, "bttn_update");
+            this.bttn_update.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.bttn_update.Name = "bttn_update";
+            this.bttn_update.UseVisualStyleBackColor = false;
+            this.bttn_update.Click += new System.EventHandler(this.bttn_clicked);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
@@ -171,13 +171,35 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.progress_bttn);
+            this.groupBox3.Controls.Add(this.bttn_update);
+            this.groupBox3.Controls.Add(this.bttn_allCourses);
+            this.groupBox3.Controls.Add(this.bttn_delete);
+            resources.ApplyResources(this.groupBox3, "groupBox3");
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.TabStop = false;
+            // 
+            // progress_bttn
+            // 
+            this.progress_bttn.BackColor = System.Drawing.Color.SteelBlue;
+            this.progress_bttn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.progress_bttn, "progress_bttn");
+            this.progress_bttn.Name = "progress_bttn";
+            this.progress_bttn.UseVisualStyleBackColor = false;
+            this.progress_bttn.Click += new System.EventHandler(this.progress_bttn_Click);
             // 
             // courses
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "courses";
@@ -185,6 +207,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -208,5 +231,7 @@
         private Button bttn_update;
         private GroupBox groupBox2;
         private DataGridView dataGridView1;
+        private GroupBox groupBox3;
+        private Button progress_bttn;
     }
 }

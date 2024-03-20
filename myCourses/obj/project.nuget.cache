@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3VWbnuyu/TpRs6Jph3HSZKfpzguBJVBtOkoXXZGlQPyVZtIxrQRntxe8FyojhywCwR8dZUz+0qqi2NIbskNb2g==",
+  "dgSpecHash": "uHNeQMyUtJGqnFBC0p12xFfblLIH/dqA//LtcwSXqqhpBH0bWMz+nDMWjAfLrBs87xaJwYv7QHSrlBD//Fh39Q==",
   "success": true,
   "projectFilePath": "D:\\visual_studio\\myCourses\\myCourses\\myCourses.csproj",
   "expectedPackageFiles": [
@@ -12,7 +12,8 @@
     "C:\\Users\\Hilal\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Hilal\\.nuget\\packages\\system.data.sqlclient\\4.8.6\\system.data.sqlclient.4.8.6.nupkg.sha512",
     "C:\\Users\\Hilal\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\Hilal\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+    "C:\\Users\\Hilal\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\Hilal\\.nuget\\packages\\winforms.datavisualization\\1.9.2\\winforms.datavisualization.1.9.2.nupkg.sha512"
   ],
   "logs": []
 }

@@ -4,5 +4,14 @@
     <Compile Update="courses.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="deleteCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="improvementGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="updateCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

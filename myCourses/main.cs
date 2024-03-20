@@ -7,6 +7,7 @@ namespace myCourses
     {
         SqlConnection connect = new SqlConnection();
         SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+
         public DataTable connect_database()
         {
             // build the connection string
@@ -27,7 +28,6 @@ namespace myCourses
             SqlDataAdapter adapter = new SqlDataAdapter("Select * from myCourses", connect);
             DataTable table = new DataTable();
             adapter.Fill(table); // fill a datatable object with data
-
 
 
             connect.Close(); // close connection
@@ -55,10 +55,10 @@ namespace myCourses
                 // perform update operation with updateCourse store procedure
                 SqlCommand update_command = new SqlCommand("updateCourse", connect);
                 update_command.CommandType = CommandType.StoredProcedure;
-                update_command.Parameters.Add("@username", SqlDbType.NVarChar).Value = userName;
-                update_command.Parameters.Add("@academy", SqlDbType.NVarChar).Value = academy;
+
                 update_command.Parameters.Add("@courseName", SqlDbType.NVarChar).Value = courseName;
-                update_command.Parameters.Add("@deadline", SqlDbType.SmallDateTime).Value = deadline;
+                update_command.Parameters.Add("@academy", SqlDbType.NVarChar).Value = academy;
+                update_command.Parameters.Add("@completionTime", SqlDbType.SmallDateTime).Value = deadline;
                 update_command.Parameters.AddWithValue("@courseState", courseState ? 1 : 0);
                 update_command.ExecuteNonQuery();
             }
@@ -68,7 +68,7 @@ namespace myCourses
                 // perform delete operation with deleteCourse store procedure
                 SqlCommand delete_command = new SqlCommand("deleteCourse", connect);
                 delete_command.CommandType = CommandType.StoredProcedure;
-                delete_command.Parameters.Add("@username", SqlDbType.NVarChar).Value = userName;
+
                 delete_command.Parameters.Add("@academy", SqlDbType.NVarChar).Value = academy;
                 delete_command.Parameters.Add("@courseName", SqlDbType.NVarChar).Value = courseName;
 
@@ -80,7 +80,7 @@ namespace myCourses
             {
 
                 // perform register operation with written command below
-                SqlCommand command = new SqlCommand("insert into myCourses values (@userName, @academy, @courseName, @deadline, @courseState)", connect);
+                SqlCommand command = new SqlCommand("insert into myCourses ([User Name], Academy, [Course Name], Deadline,[Course State]) values (@userName, @academy, @courseName, @deadline, @courseState)", connect);
 
                 command.Parameters.Add("@userName", SqlDbType.NVarChar).Value = userName;
                 command.Parameters.Add("@courseName", SqlDbType.NVarChar).Value = courseName;

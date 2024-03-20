@@ -73,3 +73,8 @@ D:\visual_studio\myCourses\myCourses\obj\Debug\net6.0-windows\refint\myCourses.d
 D:\visual_studio\myCourses\myCourses\obj\Debug\net6.0-windows\myCourses.pdb
 D:\visual_studio\myCourses\myCourses\obj\Debug\net6.0-windows\myCourses.genruntimeconfig.cache
 D:\visual_studio\myCourses\myCourses\obj\Debug\net6.0-windows\ref\myCourses.dll
+D:\visual_studio\myCourses\myCourses\obj\Debug\net6.0-windows\myCourses.deleteCourse.resources
+D:\visual_studio\myCourses\myCourses\obj\Debug\net6.0-windows\myCourses.updateCourse.resources
+D:\visual_studio\myCourses\myCourses\obj\Debug\net6.0-windows\myCourses.improvementGraph.resources
+D:\visual_studio\myCourses\myCourses\bin\Debug\net6.0-windows\WinForms.DataVisualization.Utilities.dll
+D:\visual_studio\myCourses\myCourses\bin\Debug\net6.0-windows\WinForms.DataVisualization.dll
